@@ -1,6 +1,6 @@
 # Smart Pi Radio Assistant
 
-- [Introduction to Smart Pi Radio Assistant](#intro)
+- [Introduction to Smart Pi Radio Assistant](#introduction-to-smart-pi-radio-assistant)
 - [Required Hardware](#required-hardware)
 - [Setting up Signal Processor](#signal-processor)
 - [Setting up the Raspberry Pi](#pi)
