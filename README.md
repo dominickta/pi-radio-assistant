@@ -4,17 +4,17 @@
 - [Required Hardware](#required-hardware)
 - [Setting up Signal Processor](#setting-up-signal-processor)
 - [Setting up the Raspberry Pi](#setting-up-the-raspberry-pi)
-    - [1. Install operating system on the Pi](#1.-install-operating-system-on-the-pi)
-    - [2. Set-up Internet Access to Pi via WiFi + SSH](#pi-step2)
-    - [3. Install rpitx](#pi-step3)
-    - [4. Get python script to transmit audio](#pi-step4)
-    - [5. (optional) Connect a wire to GPIO pin 4](#pi-step5)
-- [Instructions for Setting up Pi as Signal Processor](#pi-sdr)
-    - [Modify USB buffer size](#pi-sdr-usbfs)
-    - [Install conda](#pi-sdr-conda)
-    - [Install onnx runtime](#pi-sdr-onnxruntime)
-    - [Install SDR stuff](#pi-sdr-stuff)
-    - [Install pytorch](#pi-sdr-pytorch)
+    - [Install operating system on the Pi](#install-operating-system-on-the-pi)
+    - [Set up Internet Access to Pi via WiFi and SSH](#set-up-internet-access-to-pi-via-wifi-and-ssh)
+    - [Install rpitx](#install-rpitx)
+    - [Get python script to transmit audio](#get-python-script-to-transmit-audio)
+    - [Connect a wire to GPIO pin 4](#connect-a-wire-to-gpio-pin-4)
+- [Instructions for Setting up Pi as Signal Processor](#instructions-for-setting-up-pi-as-signal-processor)
+    - [Modify USB buffer size](#modify-usb-buffer-size)
+    - [Install conda](#install-conda)
+    - [Install onnx runtime](#install-onnx-runtime)
+    - [Install SDR stuff](#install-sdr-stuff)
+    - [Install pytorch](#install-pytorch)
     
 ## Introduction to Smart Pi Radio Assistant
 TODO
@@ -60,7 +60,7 @@ Issues I've faced in the past:
 * Trying to provide Internet access to Pi via ethernet cable connected to a Macbook involved turning on "Internet Sharing" over WiFi in the Sharing settings in MacOS
 * Trying to install the Raspberry Pi OS desktop version will cause problems with rpitx. rpitx installation sets GPU to 250MHz which I think is underclocking, which is required for rpitx to be stable. This means that running rpitx + monitor causes desktop and/or rpitx to crash. I've had success installing the non-desktop Raspberry Pi OS and then manually installing a lightweight desktop afterwards if you insist on having a desktop interface.
 
-### 2. Set-up Internet Access to Pi via WiFi + SSH
+### Set up Internet Access to Pi via WiFi and SSH
 Following directions in here
 1. `sudo raspi-config`
 2. Setup localisation in Localisation Options
@@ -79,7 +79,7 @@ ssh pi@raspberrypi.local
 ```
 Otherwise you can connect to your Pi by finding its IP address on your local network.
 
-### 3. Install rpitx
+### Install rpitx
 
 Follow the up-to-date instructions in the README [here](https://github.com/F5OEO/rpitx).
 
@@ -111,11 +111,11 @@ You must be running your Pi on headless mode while using rpitx (there are some w
 https://github.com/F5OEO/rpitx/issues/244
 https://github.com/F5OEO/rpitx/issues/231
 
-### 4. Get python script to transmit audio
+### Get python script to transmit audio
 
 TODO
 
-### 5. (optional) Connect a wire to GPIO pin 4
+### Connect a wire to GPIO pin 4
 
 ## Instructions for Setting up Pi as Signal Processor
 I spent a lot of time trying to get the Raspberry Pi to stream and process samples from an SDR with reasonable performance, but was unable to.
