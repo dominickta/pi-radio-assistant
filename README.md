@@ -2,9 +2,9 @@
 
 - [Introduction to Smart Pi Radio Assistant](#introduction-to-smart-pi-radio-assistant)
 - [Required Hardware](#required-hardware)
-- [Setting up Signal Processor](#signal-processor)
-- [Setting up the Raspberry Pi](#pi)
-    - [1. Install operating system on the Pi](#pi-step1)
+- [Setting up Signal Processor](#setting-up-signal-processor)
+- [Setting up the Raspberry Pi](#setting-up-the-raspberry-pi)
+    - [1. Install operating system on the Pi](#1.-install-operating-system-on-the-pi)
     - [2. Set-up Internet Access to Pi via WiFi + SSH](#pi-step2)
     - [3. Install rpitx](#pi-step3)
     - [4. Get python script to transmit audio](#pi-step4)
