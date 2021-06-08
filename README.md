@@ -35,7 +35,7 @@ TODO
 
 ## Setting up the Raspberry Pi
 
-### 1. Install operating system on the Pi
+### Install operating system on the Pi
 1. Install Raspberry Pi Imager on a computer
 2. Plug in SD card into SD card reader
 3. Insert SD card to be used to hold operating system and storage for the Raspberry Pi
