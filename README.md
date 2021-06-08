@@ -20,6 +20,7 @@
     - [Install onnx runtime](#install-onnx-runtime)
     - [Install SDR stuff](#install-sdr-stuff)
     - [Install pytorch](#install-pytorch)
+- [Possible Improvements](#possible-improvements)
     
 ## Introduction to Smart Pi Radio Assistant
 Smart Pi Radio Assistant is a smart home assistant that you can access via voice commands on a walkie talkie! Turn your Raspberry Pi into an IOT device that can control devices and reply to you via radio waves. It's fully customizable!
