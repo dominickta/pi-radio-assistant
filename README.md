@@ -29,9 +29,9 @@ Smart Pi Radio Assistant is a smart home assistant that you can access via voice
 
 | Voice Command| Example | What it does |
 | -------- | --------| -------- |
-| play <song query>| play best friend by rex orange county| Plays Spotify song|
-| weather <cityname>| weather seattle| Pi replies with current weather forecast for city (currently hardcoded response)|
-| echo <message>| echo how are you?| Pi echoes back message |
+| play <song query>| play castaways| Plays Spotify song|
+| weather <cityname>| weather seattle| Pi replies with current weather forecast for city (currently hardcoded response) 3 times|
+| echo <message>| echo how are you?| Pi echoes back message 3 times|
 
 ### Why
 
@@ -50,6 +50,15 @@ Smart Pi Radio Assistant is a smart home assistant that you can access via voice
 - [ ] Ethernet cable or WiFi for LAN w/ Pi
 - [ ] (Recommended) Temporary keyboard, mouse, monitor
 - [ ] (Recommended) Antenna material (e.g. jumper wire)
+
+An example final set-up
+* Raspberry Pi 4 (w/ case + 7.8 inch female-to-male jumper wire antenna)
+* Laptop (MacBook Pro) + USB Hub
+* Walkie Talkie (Retevis RT-5R)
+* SDR (Nooelec NESDR SMArt XTR SDR + SMA connector & Walkie Talkie Antenna)
+* Long-haired gray cat (Gumbo)
+
+![](https://i.imgur.com/MyTMy5S.jpg)
 
 ## Setting up Signal Processor
 
@@ -164,7 +173,7 @@ sudo ./pifmrds -audio sampleaudio.wav -freq 434
 ```
 This will transmit the included "sampleaudio.wav" file via the [FM radio protocol](https://en.wikipedia.org/wiki/FM_broadcasting#Other_subcarrier_services) on a frequency of 434MHz. 
 
-This should work without an antenna but range will increase with an antenna to (TBD).
+This should work without an antenna (~1 foot radius) but range will increase with a simple jumper wire antenna to up to 100 ft.
 
 There are a bunch of other fun programs in this repo such as
 - transmitting images via the waterfall in a SDR receiver
@@ -185,7 +194,15 @@ wget https://raw.githubusercontent.com/dominickta/pi-radio-assistant/main/pifmrd
 
 ### Connect a wire to GPIO pin 4
 
-TODO
+Connect a jumper wire to GPIO 4, pin 7(reference diagram [here]( https://pinout.xyz/pinout/pin7_gpio4)).
+
+With 7.8 inch jumper wire, radius of ~70-100ft with varying obstructions; radius of ~60ft should have strong signals. 
+- not a perfect circular radius, but close
+- jumper wire was laying flat on a table on the 3rd floor of a house
+- signal was captured at street level with walkie talkie
+- rough measurements were from Google Maps and only captured horizontal distance (so actual distance could be more)
+
+Without jumper wire, able to capture signal with a strong half-foot radius.
 
 ## Instructions for Setting up Pi as Signal Processor
 I spent a lot of time trying to get the Raspberry Pi to stream and process samples from an SDR with reasonable performance, but was unable to.
@@ -338,6 +355,7 @@ import numpy
 
 ## Possible Improvements
 * Get everything working on the Raspberry Pi as a standalone-package
+    * ![](https://i.imgur.com/EWHTVZo.jpg)
 * Improve python scripts to follow best coding practices 
     * no spaghetti code
     * error handling for edge cases
@@ -351,3 +369,6 @@ import numpy
 * Connect Raspberry Pi to [Home Assistant](https://www.home-assistant.io/) + IOT devices to showcase more cool stuff
 * Measure effects of different antenna materials + orientations for the Raspberry Pi
 * Create a lowpass filter because apparently the Pi transmits a lot of harmonics
+* Improve speech-to-text and text-to-speech
+    * Could involve improving machine learning models
+    * Could involve improving radio waves audio quality
