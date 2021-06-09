@@ -27,10 +27,10 @@ Smart Pi Radio Assistant is a smart home assistant that you can access via voice
 
 ### Features
 
-| Voice Command| Example | What it does |
-| -------- | --------| -------- |
-| play <song query>| play castaways| Plays Spotify song|
-| weather <cityname>| weather seattle| Pi replies with current weather forecast for city (currently hardcoded response) 3 times|
+| Voice Command| Example | What it does | Demo |
+| -------- | --------| -------- | ----- |
+| play <song query>| play castaways| Plays Spotify song| [Link](https://drive.google.com/file/d/16aXzXQmAoCxQCA06aj-efjoAv-9AqAFE/view?usp=sharing)
+| weather <cityname>| weather seattle| Pi replies with current weather forecast for city (currently hardcoded response) 3 times| [Link](https://drive.google.com/file/d/1SmAt--BXM3OxkB3_PcAV2CycJtSyKTMo/view?usp=sharing) |
 | echo <message>| echo how are you?| Pi echoes back message 3 times|
 
 ### Why
